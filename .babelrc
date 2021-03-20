@@ -1,0 +1,14 @@
+{
+  "env":{
+    "rolloup":{
+      "presets": [
+        ["env", {
+          "modules": false
+        }]
+      ],
+      "plugins": [
+        "babel-plugin-styled-components"
+      ]
+    }
+  }
+}

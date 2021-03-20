@@ -4,7 +4,7 @@ import { Meta } from '@storybook/react/types-6-0';
 import Tooltip from "../Tooltip";
 
 export default {
-  title: "Tooltip",
+  title: "UI/Tooltip",
   component: Tooltip,
   
 } as Meta;

@@ -4,11 +4,21 @@ import { Meta } from '@storybook/react/types-6-0';
 import Modal from "../Modal";
 
 export default {
-  title: "Modal",
+  title: "UI/Modal",
   component: Modal,
-  
+  argTypes:{
+    title: { control: 'text' },
+    content: { control: 'object'},
+    show: { control: 'boolean' }
+  }
 } as Meta;
 
 
-export const ModalStorie = () => <Modal title="Modal Test" content={<p>Modal Content</p>} show={true}
-close={console.log('close')} />;
+const Template = (args) => <Modal {...args} />;
+
+export const Default = Template.bind({});
+
+Default.args = {
+  title: "UI Modal",
+  show: false
+}
