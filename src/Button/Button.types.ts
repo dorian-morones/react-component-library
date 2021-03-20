@@ -6,6 +6,6 @@ export interface ButtonProps {
   border?: boolean;
   borderSize?: number;
   bordercolor?: any;
-  handleClick: any;
+  handleClick?: any;
   rounded?: boolean;
   }

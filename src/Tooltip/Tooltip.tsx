@@ -9,10 +9,14 @@ import {
 	TooltipContent
 } from './styles/Tooltip_Styles';
 
-const Tooltip: FunctionComponent<TooltipProps> = ({ content, direction = 'bottom', delay = 300,  children }) => {
+const Tooltip: FunctionComponent<TooltipProps> = ({ 
+	content,
+	direction = 'bottom',
+	delay = 300,
+	children }) => {
 
 	let timeout;
-	const [show, setShow] = useState<boolean>(true);
+	const [show, setShow] = useState<boolean>(false);
 
 	const showTip = () => {
     timeout = setTimeout(() => {
@@ -22,7 +26,7 @@ const Tooltip: FunctionComponent<TooltipProps> = ({ content, direction = 'bottom
 
   const hideTip = () => {
     clearInterval(timeout);
-    setShow(true);
+    setShow(false);
   };
 
 	return (
